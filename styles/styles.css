@@ -1,0 +1,312 @@
+:root {
+    --primary: #805c8f;
+    --accent: #00c9e3;
+    --accent_hover: #0095bf;
+    --dark: #4d4d4d;
+    --medium: #7c8389;
+    --divider: #d3d3d3;
+    --light: #e6e7e8;
+    --false: #b11012;
+    --alert: #ffca10;
+    --true: #1af1a6;
+    --white: #ffffff;
+  }
+
+@font-face {
+            font-family: 'Open-Sans-Light;
+            src:
+                 url('..fonts/Open_Sans/Open-Sans-Light.woff') format('woff'),
+                 url('../fonts/Open_Sans/Open-Sans-Light.ttf') format('truetype');
+          }
+
+ @font-face {
+            font-family: 'Open-Sans-Regular;
+            src:
+                 url('../fonts/Open_Sans/Open-Sans-Regular.woff') format('woff'),
+                 url('..fonts/Open_Sans/Open-Sans-Regular.ttf') format('truetype');
+          }
+
+@font-face {
+            font-family: 'Open-Sans-Semibold;
+            src: 
+                 url('../fonts/Open_Sans/Open-Sans-SemiBold.woff') format('woff'),
+                 url('../fonts/Open_Sans/Open-Sans-SemiBold.ttf') format('truetype');
+          }
+ @font-face {
+            font-family: 'Open-Sans-Bold;
+            src: url('..fonts/Open_Sans/Open-Sans-Bold.woff') format('woff'),
+                 url('../fonts/Open_Sans/Open-Sans-Bold.ttf') format('truetype');    
+          }
+
+.white-font {
+    color: var(--white);
+}
+.white-bakground {
+    background-color: var(--white);
+}
+.accent {
+    background-color: var(--accent);
+    color: var(--white);
+}
+h1 {
+    font-family: 'Open-Sans-Light';
+    font-size: 60.75px;
+    color: var(--dark);
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Open-Sans-Semibold';
+    font-size: 40.5px;
+    color: var(--dark);
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Open-Sans-Semibold';
+    font-size: 36px;
+    color: var(--dark);
+    text-align: center;
+}
+h4 {
+    font-family: 'Open-Sans-Bold';
+    font-size: 27px;
+    text-align: center;
+}
+.subhead, .subhead-disabled, .body1, .body2, .caption, .small {
+    font-family: 'Open-Sans-Regular';
+}
+.subhead, .subhead-disabled {
+    font-size: 21px;
+    text-align: center;
+}
+
+.subhead-disabled {
+    color: var(--medium);
+}
+
+.body-text {
+    font-size: 18px;
+    color: var(--dark);
+}
+
+.body-text2 {
+    font-size: 16px;
+    color: var(--dark);
+}
+
+.caption {
+    font-size: 12px;
+    color: #3e484e;
+    text-align: center;
+}
+
+.small {
+    font-size: 8px;
+}
+
+.normal-button, .normal-button:hover, .normal-button-disabled, .ghost-button, .ghost-button-disabled, .ghost-button:hover {
+    font-family: 'Open-Sans-Semibold';
+    font-size: 14px;
+    width: 272px;
+    height: 40px;
+    text-align: center;
+}
+.normal-button, .normal-button:hover {
+    border: none;
+}
+
+.normal-button:hover {
+    background-color: var(--accent_hover);
+}
+
+.normal-button-disabled {
+    background-color: rgba(0,201,227,0.40);
+    color: rgba(255,255,255,0.40);
+    border: none;
+    line-height: 20px; 
+    
+}
+.ghost-button {
+    border: 1px solid var(--accent);
+    color: rgba(0,201,227,0.40);
+    border-radius: 2px;
+    background-color: var(--white);
+    text-align: center;
+}
+.ghost-button:hover {
+    color: var(--white);
+    background-color: var(--accent);
+    border: 1px solid var(--accent);
+    width: 272px;
+    height: 40px;
+    text-align: center;
+}
+.ghost-button-disabled {
+    color: var(--accent);
+    background-color: var(--white);
+    opacity: 0.4;
+    border: 1px solid var(--accent);
+    line-height: 20px; 
+    text-align: center;
+}
+
+.hyperlink-normal, .hyperlink-normal: hover {
+    font-family: Open-Sans-Regular;
+    font-size: 14px;
+    color: #0178D7;
+    letter-spacing: 0;
+    line-height: 16px;
+}
+
+.hyperlink-normal:hover {
+    color: var(--accent);
+}
+
+/* custom checkbox */
+.checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* hide the browser's default checkbox */
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* create custom checkbox */
+.check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 2px solid var(--medium);
+}
+
+/* on mouse-over, add border color */
+.checkbox:hover input ~ .check {
+    border: 4px solid var(--accent);
+    background-color: var(--white);
+}
+
+/* add background color when the checkbox is checked */
+.checkbox input:checked ~ .check {
+    background-color:#00C9E3;
+    border: none;
+}
+
+/* create the checkmark and hide when not checked */
+.check:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* show the checkmark when checked */
+.checkbox input:checked ~ .check:after {
+    display: block;
+}
+
+/* checkmark style */
+.checkbox .check:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--white);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* custom radio */
+.radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* hide the browser's default radio button */
+.radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* create custom radio */
+.radio .check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 2px solid var(--medium);
+    border-radius: 50%;
+}
+
+/* on mouse-over, add border color */
+.radio:hover input ~ .check {
+    border: 2px solid var(--accent);
+}
+
+/* add background color when the radio is checked */
+.radio input:checked ~ .check {
+    background-color: var(--accent);
+    border: 2px solid var(--white);
+}
+
+/* create the radio and hide when not checked */
+.radio .check:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* show the radio when checked */
+.radio input:checked ~ .check:after {
+    display: block;
+}
+
+/* radio style */
+.radio .check:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--white);
+}
+.container{
+    width: 40%;
+    height: 40%;
+}
+.modal {
+    display: none;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.modalbkg {
+    background-color:  rgb(184, 195, 204);
+}
