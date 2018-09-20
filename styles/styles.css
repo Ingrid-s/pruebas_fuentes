@@ -84,20 +84,36 @@ h4 {
 .subhead-disabled {
     color: var(--medium);
 }
+.subhead-disabled-white {
+    color: var(--white);
+    opacity: 0.4;
+}
 
 .body-text {
     font-size: 18px;
     color: var(--dark);
 }
-
+.body-text-white {
+    font-size: 18px;
+    color: var(--white);
+}
 .body-text2 {
     font-size: 16px;
     color: var(--dark);
+}
+.body-text2-white {
+    font-size: 16px;
+    color: var(--white);
 }
 
 .caption {
     font-size: 12px;
     color: #3e484e;
+    text-align: center;
+}
+.caption-white {
+    font-size: 12px;
+    color: var(--white);
     text-align: center;
 }
 
@@ -114,15 +130,18 @@ h4 {
 }
 .normal-button, .normal-button:hover {
     border: none;
+    border-radius: 2px;
+    background-color: var(--accent);
 }
 
 .normal-button:hover {
     background-color: var(--accent_hover);
+    border-radius: 2px;
 }
 
 .normal-button-disabled {
-    background-color: rgba(0,201,227,0.40);
-    color: rgba(255,255,255,0.40);
+    background-color: rgba(0, 201, 227, 0.4);
+    color: var(--white);
     border: none;
     line-height: 20px; 
     
@@ -138,8 +157,6 @@ h4 {
     color: var(--white);
     background-color: var(--accent);
     border: 1px solid var(--accent);
-    width: 272px;
-    height: 40px;
     text-align: center;
 }
 .ghost-button-disabled {
@@ -309,4 +326,10 @@ h4 {
 
 .modalbkg {
     background-color:  rgb(184, 195, 204);
+}
+.section-primary{
+    background-color: var(--primary);
+}
+.section-accent {
+    background-color: var(--accent);
 }
